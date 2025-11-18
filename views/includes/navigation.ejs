@@ -1,28 +1,14 @@
 <%- include('./bootstrap-css.ejs') %>
-<nav class="navbar navbar-expand-lg" style="background-color: #1D422C;">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="/">Sistema de Padaria</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link <%= path === '/' ? 'active' : '' %>" aria-current="page" href="#">Início</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#">Cardápio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Cestas</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">A Padaria</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Localização</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+<div class="d-flex flex-column flex-shrink-0 p-3 bg-body-tertiary" style="width: 280px;"> <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"> <svg class="bi pe-none me-2" width="40" height="32" aria-hidden="true"><use xlink:href="#bootstrap"></use></svg> <span class="fs-4">Sua Padaria</span> </a> <hr> <ul class="nav nav-pills flex-column mb-auto"> <li class="nav-item"> <a href="#" class="nav-link active" aria-current="page"> <svg class="bi pe-none me-2" width="16" height="16" aria-hidden="true"><use xlink:href="#home"></use></svg>
+Início
+</a> </li> <li> <a href="#" class="nav-link link-body-emphasis"> <svg class="bi pe-none me-2" width="16" height="16" aria-hidden="true"><use xlink:href="#speedometer2"></use></svg>
+Cadastro de Cliente
+</a> </li> <li> <a href="#" class="nav-link link-body-emphasis"> <svg class="bi pe-none me-2" width="16" height="16" aria-hidden="true"><use xlink:href="#table"></use></svg>
+Cadastro de Produto
+</a> </li> <li> <a href="#" class="nav-link link-body-emphasis"> <svg class="bi pe-none me-2" width="16" height="16" aria-hidden="true"><use xlink:href="#grid"></use></svg>
+Compras
+</a> </li> <li> <a href="#" class="nav-link link-body-emphasis"> <svg class="bi pe-none me-2" width="16" height="16" aria-hidden="true"><use xlink:href="#people-circle"></use></svg>
+Vendas
+<hr>
+</a> </li> <li> <a href="#" class="nav-link link-body-emphasis"> <svg class="bi pe-none me-2" width="16" height="16" aria-hidden="true"><use xlink:href="#people-circle"></use></svg>
+Configurações

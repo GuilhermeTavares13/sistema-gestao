@@ -4,3 +4,15 @@ exports.getIndex = (req, res, next) => {
     });
 }
 
+exports.getSignIn = (req, res, next) => {
+    res.render('padaria/signin',{
+        path: '/signin'
+    });
+}
+
+exports.getSignUp = (req, res, next) => {
+    res.render('padaria/signup',{
+        path: '/signup'
+    });
+}
+
