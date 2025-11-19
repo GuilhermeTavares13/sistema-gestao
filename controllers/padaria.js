@@ -16,3 +16,9 @@ exports.getSignUp = (req, res, next) => {
     });
 }
 
+exports.getCliente = (req, res, next) => {
+    res.render('padaria/cliente',{
+        path: '/cliente'
+    });
+}
+
