@@ -4,6 +4,15 @@ let initialX = 0, initialY = 0;
 let moveElement = false;
 
 let events = {
+    
+    ctrlKey: {
+        down: "keydown"
+    },
+
+    shiftKey: {
+        down: "keydown"
+    },
+
     mouse: {
         down: "mousedown",
         move: "mousemove",
@@ -38,7 +47,10 @@ draggableElem.addEventListener(events[deviceType].down, (e) => {
     initialX = !isTouchDevice() ? e.clientX : e.touches[0].clientX;
     initialY = !isTouchDevice() ? e.clientY : e.touches[0].clientY;
 
-    moveElement = true;
+    if(e.ctrlKey && e.shiftKey) {
+        moveElement = true;
+        draggableElem.style.cursor = 'move';
+    }
 });
 
 draggableElem.addEventListener(events[deviceType].move, (e) => {
@@ -58,9 +70,11 @@ draggableElem.addEventListener(events[deviceType].move, (e) => {
 
 draggableElem.addEventListener(events[deviceType].up,(stopMovement = (e) => {
     moveElement = false;
+    draggableElem.style.cursor = 'default';
 }));
 
 draggableElem.addEventListener("mouseLeave", stopMovement);
 draggableElem.addEventListener(events[deviceType].up, (e) => {
     moveElement = false;
+    draggableElem.style.cursor = 'default';
 });

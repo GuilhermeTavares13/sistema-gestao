@@ -12,13 +12,4 @@
     place-items: center;
     font-family: "Poppins", sans-serif;
     border-radius: 0.3em;
-    cursor: move;
-}
-
-#inner-tela-cadastro-cliente {
-    background-color: #ffffff;
-    width: 98%;
-    height: 97%;
-    border-radius: 0.3em;
-    cursor: default;
 }
