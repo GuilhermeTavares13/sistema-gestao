@@ -7,7 +7,7 @@ const app = express();
 app.set('view engine', 'ejs');
 app.set('views','views');
 
-const padariaRoutes = require('./routes/padaria');
+const padariaRoutes = require('./routes/gestao');
 
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({ extended: false }));

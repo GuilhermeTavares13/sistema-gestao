@@ -1,29 +1,29 @@
 exports.getIndex = (req, res, next) => {
-    res.render('padaria/index',{
+    res.render('gestao/index',{
         path: '/'
     });
 }
 
 exports.getSignIn = (req, res, next) => {
-    res.render('padaria/signin',{
+    res.render('gestao/signin',{
         path: '/signin'
     });
 }
 
 exports.getSignUp = (req, res, next) => {
-    res.render('padaria/signup',{
+    res.render('gestao/signup',{
         path: '/signup'
     });
 }
 
 exports.getCliente = (req, res, next) => {
-    res.render('padaria/cliente',{
+    res.render('gestao/cliente',{
         path: '/cliente'
     });
 }
 
 exports.getProduto = (req, res, next) => {
-    res.render('padaria/produto',{
+    res.render('gestao/produto',{
         path: '/produto'
     });
 }
