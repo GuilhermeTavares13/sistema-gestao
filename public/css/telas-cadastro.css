@@ -1,14 +1,14 @@
-#tela-cadastro-cliente {
+.tela-cadastro {
     position: absolute;
-    background-color: #525353;
+    background-color: #ffffff;
     font-size: 1.6em;
     width: 1000px;
     height: 600px;
     transform: translate(-50%, -50%);
     left: 50%;
     top: 50%;
-    display: grid;
     place-items: center;
-    font-family: "Poppins", sans-serif;
+    font-family: "Calibri", sans-serif;
     border-radius: 0.3em;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }

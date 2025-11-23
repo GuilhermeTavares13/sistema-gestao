@@ -7,13 +7,17 @@ const app = express();
 app.set('view engine', 'ejs');
 app.set('views','views');
 
-const padariaRoutes = require('./routes/gestao');
+const menuRoutes = require('./routes/menu');
+const cadastroClienteRoutes = require('./routes/cadastroCliente');
+
 
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(padariaRoutes);
+app.use(menuRoutes);
+app.use(cadastroClienteRoutes);
+
 
 app.listen(3000);
 

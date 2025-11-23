@@ -43,11 +43,10 @@ const isTouchDevice = () => {
 isTouchDevice();
 
 draggableElem.addEventListener(events[deviceType].down, (e) => {
-    e.preventDefault();
-    initialX = !isTouchDevice() ? e.clientX : e.touches[0].clientX;
-    initialY = !isTouchDevice() ? e.clientY : e.touches[0].clientY;
-
     if(e.ctrlKey && e.shiftKey) {
+        e.preventDefault();
+        initialX = !isTouchDevice() ? e.clientX : e.touches[0].clientX;
+        initialY = !isTouchDevice() ? e.clientY : e.touches[0].clientY;
         moveElement = true;
         draggableElem.style.cursor = 'move';
     }

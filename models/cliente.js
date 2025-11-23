@@ -22,4 +22,5 @@ const User = sequelize.define('user',{
         allowNull: false
     },
     telefone: Sequelize.STRING,
+    observacao: Sequelize.STRING
 });
