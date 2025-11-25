@@ -44,8 +44,7 @@ body {
     padding-top: 20px;
     transition: width 0.3s;
     border-radius: 1rem;
-    /* --border-width: 1px; */
-    background: hsl(255, 44%, 7%, 0.5);
+    background: hsla(0, 0%, 100%, 0.8);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
@@ -67,8 +66,8 @@ body {
     align-items: center;
     gap: 20px;
     padding: 10px 20px;
-    color: #fff;
-    background-color: hsl(255, 44%, 7%, 0.5);
+    color: #000000;
+    background-color: hsla(0, 0%, 100%, 0.8); 
 }
 
 .sidebar .nav-link:hover {
