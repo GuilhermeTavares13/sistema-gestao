@@ -1,4 +1,4 @@
-.signup {
+.login {
     position: absolute;
     /* background-color: hsl(255, 44%, 7%, 0.5); */
     background-color: hsla(0, 0%, 100%, 0.8);
@@ -15,7 +15,7 @@
     z-index: -1;
 }
 
-.signup h2 {
+.login h2 {
     font-size: 25px;
     margin-bottom: 40px;
     text-align: center;

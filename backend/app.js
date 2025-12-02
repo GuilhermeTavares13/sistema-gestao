@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const session = require('express-session');
 const mongoose = require('mongoose');
+const cors = require('cors');
 require('dotenv').config();
 
 const app = express();
@@ -12,11 +13,7 @@ app.set('views','views');
 
 const User = require('./models/user');
 
-// const menuRoutes = require('./routes/menu');
-// const cadastroClienteRoutes = require('./routes/cadastroCliente');
-// const authRoutes = require('./routes/auth');
-
-
+const authRoutes = require('./routes/auth');
 
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -25,9 +22,13 @@ app.use(
     session({ secret: 'my secret', resave: false, saveUninitialized: false })
 );
 
-// app.use(menuRoutes);
-// app.use(cadastroClienteRoutes);
-// app.use(authRoutes);
+app.use(cors({
+    origin: 'http://localhost:3000',
+    methods: 'POST',
+    allowedHeaders: ['Content-Type', 'Authorization']
+}));
+
+app.use(authRoutes);
 
 
 mongoose
